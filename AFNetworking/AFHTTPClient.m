@@ -335,7 +335,7 @@ static NSString * AFPropertyListStringFromParameters(NSDictionary *parameters) {
     }
     
     if (!operation) {
-        operation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
+        operation = [[[AFHTTPRequestOperation alloc] initWithRequest:urlRequest] autorelease];
     }
     
     [operation setCompletionBlockWithSuccess:success failure:failure];
